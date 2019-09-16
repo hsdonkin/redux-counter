@@ -2,12 +2,12 @@ import React from 'react';
 import { createStore } from 'redux';
 
 // no braces here!!! it broke with them because {} specifies not the "default export" for something
-import counterReducer from './reducers';
 
+import rootReducer from './reducers/';
 import { increment, decrement } from './actions';
 
 // create the store from Redux, and pass in the reducer we made
-const store = createStore(counterReducer);
+const store = createStore(rootReducer);
 // any time the store changes, log it in the console
 store.subscribe(() => console.log(store.getState()));
 

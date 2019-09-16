@@ -1,13 +1,13 @@
-function isLoggedIn(state = false, action) {
+function isLoggedIn(state = { isLoggedIn: false }, action) {
   switch (action.type) {
     case 'LOG_IN':
-      return true;
+      return { isLoggedIn: true };
       break;
     case 'LOG_OUT':
-      return false;
+      return { isLoggedIn: false };
       break;
     default:
-      return state;
+      return { isLoggedIn: state.isLoggedIn };
       break;
   }
 }

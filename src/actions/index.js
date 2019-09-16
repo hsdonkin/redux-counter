@@ -7,3 +7,11 @@ export const increment = () => ({
 export const decrement = () => ({
   type: 'DECREMENT'
 });
+
+export const logIn = () => {
+  type: 'LOG_IN';
+};
+
+export const logOut = () => {
+  type: 'LOG_OUT';
+};
